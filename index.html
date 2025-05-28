@@ -4,15 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+  <style>
+    body {
+        background-color: aqua;
+    }
+  </style>
     <link rel="stylesheet" href="style.css">
     
+    <style>
+      .carousel-container {
+        width: 80%;
+        max-width: 600px;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+      }
+    
+      .carousel-slide {
+        display: none;
+        text-align: center;
+        font-size: 24px;
+        padding: 40px;
+        background-color: #f2f2f2;
+        cursor: pointer;
+      }
+    
+      .carousel-slide.active {
+        display: block;
+      }
+    
+      .carousel-buttons {
+        text-align: center;
+        margin-top: 10px;
+      }
+    
+      .carousel-buttons button {
+        padding: 10px 20px;
+        margin: 5px;
+      }
+    </style>
+  
 </head>
-<body>
+<body style="margin:10px; font-size: 25px;">
     <div class="topnav">
         <a class="active" href="index.html">Home</a>
-        <a href="aboutthisweb.html">About this website</a>
-        <a href="suggetions.html">Suggetions</a>
-        <a href="contactus.html">Contact_us</a>
+        <a href="match analysis.html">match analysis</a>
+        <a href="injury alerts.html">injury alerts</a>
+        <a href="Team announcements.html">Team announcements</a>
+        <a href="your ipl fantasy 11.html">Create your playing XI</a>
     </div>
+
+    <h2 style="text-align:center;"></h2>
+    
+    <div class="carousel-container">
+      <div class="carousel-slide active" onclick="goToLink(0)">📊 Match analysis and pitch report.</div>
+      <div class="carousel-slide" onclick="goToLink(1)">🔥 Check player injury alerts.</div>
+      <div class="carousel-slide" onclick="goToLink(2)">📢 View team announcements.</div>
+      <div class="carousel-slide" onclick="goToLink(3)">🏏 Pick your captain wisely!</div>
+    </div>
+    
+    <div class="carousel-buttons">
+      <button onclick="prevSlide()">Previous</button>
+      <button onclick="nextSlide()">Next</button>
+    </div>
+    
+    <script>
+      let currentIndex = 0;
+      const slides = document.getElementsByClassName("carousel-slide");
+
+      const links = [
+        "match analysis.html",         // 0
+        "injury alerts.html",             // 1
+        "team announcements.html",   // 2
+        "your ipl fantasy playing XI"        // 3
+      ];
+
+      function showSlide(index) {
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].classList.remove("active");
+        }
+        slides[index].classList.add("active");
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+      }
+
+      function goToLink(index) {
+        window.location.href = links[index];
+      }
+    </script>
+    <h4>Origin of cricket</h4>
+  
+    <p>The sport of cricket has a known history beginning in the late 16th century England. It became an established sport
+      in
+      the country in the 18th century and developed globally in the 19th and 20th centuries. International matches have
+      been
+      played since the 19th-century and formal Test cricket matches are considered to date from 1877.</p><img src="cric 1.jpg" style="width:350px;height:250px;"><p>Cricket is the
+      world's
+      second most popular spectator sport, after association football (soccer). Internationally, cricket is governed by
+      the
+      International Cricket Council (ICC), which has over one hundred countries and territories in membership, although
+      only
+      twelve currently play Test cricket. The game's rules are defined in the "Laws of cricket". The game has various
+      formats,
+      ranging from T-10(Ten-10) played in around 90 minutes to Test matches, which can last up to five days.Origin Cricket
+      was
+      created during Saxon or Norman times by children living in the Weald, an area of dense woodlands and clearings in
+      south-east England that lies across Kent and Sussex. The first definite written reference is from the end of the
+      16th
+      century. There have been several speculations about the game's origins, including some that it was created in France
+      or
+      Flanders. The earliest of these speculative references is from 1300 and concerns the future King Edward II playing
+      at
+      "creag and other games" in both Westminster and Newenden. It has been suggested that "creag" was an Old English word
+      for
+      cricket, but expert opinion is that it was an early spelling of "craic", meaning "fun and games in general".</p>
+      <img src="cricket 2.jpg" style="width:200px;height:250px;padding:20px">
+      <img src="cricket3.jpg" style="width:350px;height:250px;padding:20px"> <img src="cricket4.webp" style="width:350px;height:250px;padding:20px">
+      <img src="cricket5.bin" style="width:350px;height:250px;padding:20px"><p>It
+      is
+      generally believed that cricket survived as a children's game for many generations before it was increasingly taken
+      up
+      by adults around the beginning of the 17th century. Possibly cricket was derived from bowls, assuming bowls is the
+      older
+      sport, by the intervention of a batsman trying to stop the ball from reaching its target by hitting it away. Playing
+      on
+      sheep-grazed land or in clearings, the original implements may have been a matted lump of sheep's wool (or even a
+      stone
+      or a small lump of wood) as the ball; a stick or a crook or another farm tool as the bat; and a stool or a tree
+      stump or
+      a gate (e.g., a wicket gate) as the wicket.</p>
+    
+ 
+  
+ 
+  
 </body>
 </html>
