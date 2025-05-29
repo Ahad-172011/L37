@@ -22,3 +22,19 @@ body {
     background-color: azure;
     color: rgb(155, 20, 38);
 }
+.footer {
+    left: 0;
+    bottom:0;
+    width:100%;
+    background-color: rgb(3, 16, 16);
+    color: aqua;
+    text-align: center;
+    margin-top: 5px;
+}
+p {
+    margin-bottom: 10px;
+}
+button {
+    background-color: greenyellow;
+    font-size: 25px;
+}
