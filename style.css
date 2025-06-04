@@ -22,6 +22,12 @@ body {
     background-color: azure;
     color: rgb(155, 20, 38);
 }
+img#cricketright {
+    float:right
+}
+img#cricketleft {
+    float:left
+}
 .footer {
     left: 0;
     bottom:0;
